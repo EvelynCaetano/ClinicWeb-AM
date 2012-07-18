@@ -1,0 +1,54 @@
+/*
+ * jQuery UI Accordion 1.8.18
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Accordion#theming
+ */
+/* IE/Win - Fix animation bug - #4615 */
+
+
+.ui-accordion { width: 100%; }
+.ui-accordion span {margin-left:-15px;}
+.ui-accordion .ui-accordion-header {
+	cursor: pointer; position: relative; zoom: 1;
+	font-weight:normal;
+	background:url(../../images/dark/widgettitlebg.png) repeat-x;
+	height:25px;
+	position:relative;
+	padding: 12px 15px 0px 15px;
+	font-size:14px;
+	border: 2px solid #cbcaca;		
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	-o-border-radius:4px;
+	-khtml-border-radius:4px;	
+	border-radius:4px;
+	margin-bottom:1px;
+	line-height:14px;
+}
+.ui-accordion .ui-accordion-header:hover {
+	background:url(../../images/dark/widgettitlebgHover.png) repeat-x;
+}
+.ui-accordion .ui-accordion-li-fix { display: inline; }
+.ui-accordion .ui-accordion-header-active { }
+.ui-accordion .ui-accordion-header a { display: block; color: #5e5d5d; }
+.ui-accordion .ui-accordion-header .ui-icon {
+	position: absolute;
+	right: 13px;
+	top: 50%;
+	margin-top: -8px; 
+}
+.ui-accordion .ui-accordion-content {
+	padding: 1em 2.2em;
+	display:none;
+	background-color:#fffdf8;
+	margin-top:-5px;
+	margin-bottom: 2px;
+	border:2px solid #cbcaca;
+	border-top:none;
+	width:auto !important;
+}
+.ui-accordion .ui-accordion-content-active { display: block; }

@@ -2,7 +2,7 @@ package am.clinicweb.interfaces;
 
 import java.util.List;
 
-import com.webclinic.entity.FuncionarioEntity;
+import am.clinicweb.to.FuncionarioEntity;
 
 public interface FuncionarioDAO {
 

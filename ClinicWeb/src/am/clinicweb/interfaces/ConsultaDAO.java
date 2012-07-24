@@ -3,7 +3,7 @@ package am.clinicweb.interfaces;
 import java.util.Calendar;
 import java.util.List;
 
-import com.webclinic.entity.ConsultaEntity;
+import am.clinicweb.to.ConsultaEntity;
 
 public interface ConsultaDAO {
 

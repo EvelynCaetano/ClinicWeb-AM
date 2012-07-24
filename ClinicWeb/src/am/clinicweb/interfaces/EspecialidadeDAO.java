@@ -2,7 +2,8 @@ package am.clinicweb.interfaces;
 
 import java.util.List;
 
-import com.webclinic.entity.EspecialidadeEntity;
+import am.clinicweb.to.EspecialidadeEntity;
+
 
 public interface EspecialidadeDAO {
 

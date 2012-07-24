@@ -2,7 +2,7 @@ package am.clinicweb.interfaces;
 
 import java.util.List;
 
-import com.webclinic.entity.PacienteEntity;
+import am.clinicweb.to.PacienteEntity;
 
 public interface PacienteDAO {
 

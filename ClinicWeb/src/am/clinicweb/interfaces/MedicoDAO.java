@@ -2,7 +2,8 @@ package am.clinicweb.interfaces;
 
 import java.util.List;
 
-import com.webclinic.entity.MedicoEntity;
+import am.clinicweb.to.MedicoEntity;
+
 
 public interface MedicoDAO {
 

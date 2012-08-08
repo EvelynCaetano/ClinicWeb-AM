@@ -3,7 +3,7 @@ package am.clinicweb.interfaces;
 import java.util.List;
 
 import am.clinicweb.to.PacienteEntity;
-
+@Deprecated
 public interface PacienteDAO {
 
 	public void cadastrar(PacienteEntity paciente);

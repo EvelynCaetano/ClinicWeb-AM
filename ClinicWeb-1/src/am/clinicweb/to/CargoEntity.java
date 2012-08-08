@@ -1,0 +1,49 @@
+package am.clinicweb.to;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+/** 
+ * @author Eduardo Michels
+ * @since 14/07/2012
+ * @version 1.0
+ */
+
+@Entity
+@Table(name="TB_CARGO")
+@SequenceGenerator(name="cargo", sequenceName="SEQ_CARGO",
+allocationSize=1) 
+public class CargoEntity {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE,
+	generator="cargo")
+	@Column(name="")
+	private int id;
+	
+	@Column(name="")
+	private String descricao;
+
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+<<<<<<< HEAD
+	
+=======
+>>>>>>> 27f3f4661ebb683a52aca36969a236f077210a40
+}

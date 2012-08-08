@@ -4,7 +4,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import am.clinicweb.to.ConsultaEntity;
-
+@Deprecated
 public interface ConsultaDAO {
 
 	public void agendar(ConsultaEntity consulta);
@@ -14,5 +14,6 @@ public interface ConsultaDAO {
 	public ConsultaEntity consultarAgenda(int idConsulta);
 	public List<ConsultaEntity> consultarAgenda();
 	public List<ConsultaEntity> consultarAgenda(Calendar dtInicio, Calendar dtFim);
+	
 	
 }

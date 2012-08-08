@@ -1,12 +1,6 @@
 package am.clinicweb.to;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /** 
  * @author Eduardo Michels
@@ -25,29 +19,33 @@ public class EnderecoEntity {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE,
 	generator="endereco")
-	@Column(name="")
+	@Column(name="COD_ENDERECO")
 	private int id;
 	
-	@Column(name="")
+	@Column(name="LOGRADOURO")
 	private String logradouro;
 	
-	@Column(name="")
+	@Column(name="COD_TIPO_LOGRADOURO")
 	private TipoLogradouro tipoLogradouro;
 	
-	@Column(name="")
+	@Column(name="NUMERO")
 	private int numero;
 	
-	@Column(name="")
+	@Column(name="BAIRRO")
+	private String bairro;
+	
+	@Column(name="CEP")
 	private int cep;
 	
-	@Column(name="")
+	@Column(name="COD_CIDADE")
 	private CidadeEntity cidade;
 	
-	@Column(name="")
+	@Column(name="COMPLEMENTO")
 	private String complemento;
 	
-	@Column(name="")
+	@Column(name="COD_PESSOA")
 	private PessoaEntity pessoa;
+	
 	
 	
 	public int getId() {
@@ -97,6 +95,13 @@ public class EnderecoEntity {
 	}
 	public void setPessoa(PessoaEntity pessoa) {
 		this.pessoa = pessoa;
+	}
+	
+	public String getBairro() {
+		return bairro;
+	}
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
 	}
 	
 	

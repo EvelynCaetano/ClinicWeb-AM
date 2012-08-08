@@ -3,13 +3,7 @@ package am.clinicweb.to;
 import java.util.Calendar;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /** 
  * @author Eduardo Michels
@@ -26,34 +20,34 @@ public class PessoaEntity {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE,
 	generator="pessoa")
-	@Column(name="")
+	@Column(name="COD_PESSOA")
 	private int id;
 	
-	@Column(name="")
+	@Column(name="NOME")
 	private String nome;
 	
-	@Column(name="")
+	@Column(name="SOBRENOME")
 	private String sobrenome;
 	
 	@Column(name="")
 	private Calendar dtNascimento;
 	
-	@Column(name="")
+	@Column(name="SEXO")
 	private char sexo;
 	
-	@Column(name="")
+	@Column(name="CPF")
 	private long cpf;
 	
-	@Column(name="")
+	@Column(name="RG")
 	private String rg;
 	
-	@Column(name="")
+	@Column(name="COD_PERFIL")
 	private PerfilAcessoEntity perfil;
 
 	@Column(name="")
 	private List<ContatoEntity> contatos;
 	
-	@Column(name="")
+	@Column(name="COD_ENDERECO")
 	private List<EnderecoEntity> enderecos;
 	
 	public int getId() {

@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="_template.xhtml">
+	<ui:define name="conteudo">
+		<f:loadBundle basename="nls.cadastrarPessoa" var="leg"></f:loadBundle>
+		<div id="main_content">
+			<div id="right_content">
+
+				<h:form>
+
+					<p:growl></p:growl>
+
+					<h:outputText styleClass="textField" value="#{leg.cadastrar}" />
+
+					<h:selectOneMenu id="cadastro" value="#{c.tipoCadastro}"
+						onchange="submit()"	valueChangeListener="#{c.mostraCampos}">
+						<f:selectItem id="cad0" itemLabel="Selecionar" itemValue="0" />
+						<f:selectItem id="cad1" itemLabel="Paciente" itemValue="1" />
+						<f:selectItem id="cad2" itemLabel="Medico" itemValue="2" />
+						<f:selectItem id="cad3" itemLabel="Funcionario" itemValue="3" />
+					</h:selectOneMenu>
+
+					<br />
+					<br />
+					<h:outputText styleClass="textField" value="#{leg.nome}" />
+					<h:inputText value="#{c.pessoa.nome}" required="true"
+						requiredMessage="Nome Obrigatório" />
+
+					<br />
+					<h:outputText styleClass="textField" value="#{leg.sobrenome}" />
+					<h:inputText value="#{c.pessoa.sobrenome}" required="true"
+						requiredMessage="#{leg.sobrenome_Obrigatorio}" />
+					<br />
+					<h:outputText styleClass="textField"
+						value="#{leg.data_de_Nascimento}" />
+					<h:inputText value="#" required="true"
+						requiredMessage="#{leg.campo_Obrigatorio}" />
+					<br />
+					<h:outputText styleClass="textField" value="#{leg.rg}" />
+					<h:inputText value="#{c.pessoa.rg}" required="true"
+						requiredMessage="#{leg.campo_Obrigatorio}" />
+					<br />
+					<h:outputText styleClass="textField" value="#{leg.cpf}" />
+					<h:inputText value="#{c.pessoa.cpf}" required="true"
+						requiredMessage="#{leg.campo_Obrigatorio}" />
+
+
+					<!--Endereco  -->
+					
+						<br />
+					<h:outputText styleClass="textField" value="#{leg.tipo_logradouro}" />
+					<h:inputText value="#{c.endereco.tipo_logradouro}" required="true"
+						requiredMessage="#{leg.campo_Obrigatorio}" />
+						
+						<br />
+					<h:outputText styleClass="textField" value="#{leg.logradouro}" />
+					<h:inputText value="#{c.endereco.logradouro}" required="true"
+						requiredMessage="#{leg.campo_Obrigatorio}" />
+						
+						<br />
+					<h:outputText styleClass="textField" value="#{leg.cep}" />
+					<h:inputText value="#{c.pessoa.cep}" required="true"
+						requiredMessage="#{leg.campo_Obrigatorio}" />
+						
+						<br />
+					<h:outputText styleClass="textField" value="#{leg.numero}" />
+					<h:inputText value="#{c.endereco.numero}" required="true"
+						requiredMessage="#{leg.campo_Obrigatorio}" />
+						
+						<br />
+					<h:outputText styleClass="textField" value="#{leg.complemento}" />
+					<h:inputText value="#{c.endereco.complemento}" required="true"
+						requiredMessage="#{leg.campo_Obrigatorio}" />
+						
+						<br />
+					<h:outputText styleClass="textField" value="#{leg.cidade}" />
+					<h:inputText value="#{c.endereco.cidade}" required="true"
+						requiredMessage="#{leg.campo_Obrigatorio}" />
+						
+						<br />
+					<h:outputText styleClass="textField" value="#{leg.bairro}" />
+					<h:inputText value="#{c.endereco.bairro}" required="true"
+						requiredMessage="#{leg.campo_Obrigatorio}" />
+						
+											
+					
+					<!--Medico  -->
+					<br/>
+					<h:outputText styleClass="textField" value="#{leg.crm}"
+						rendered="#{c.camposMedico}" />
+					<h:inputText value="#{c.medico.crm}" required="true"
+						requiredMessage="Campo Obrigatório" rendered="#{c.camposMedico}" />
+
+					
+					<br />
+
+					<!--Funcionario  -->
+
+
+					<h:outputText styleClass="textField" value="#{leg.salario}"
+						rendered="#{c.camposFuncionario}" />
+					<h:inputText value="#{c.funcionario.salario}" required="true"
+						requiredMessage="Campo Obrigatório"
+						rendered="#{c.camposFuncionario}" />
+
+					<br />
+
+
+					<h:outputText styleClass="textField" value="#{leg.codcargo}"
+						rendered="#{c.camposFuncionario}" />
+					<h:inputText value="#{c.funcionario.codcargo}" required="true"
+						requiredMessage="Campo Obrigatório"
+						rendered="#{c.camposFuncionario}" />
+
+					<br />
+					<br />
+
+					<h:commandButton value="#{leg.cadastrar}" action="#{c.teste2}"></h:commandButton>
+					<br />
+					<br />
+
+				</h:form>
+			</div>
+		</div>
+	</ui:define>
+</ui:composition>
+</html>
+
+
+
+
+
+

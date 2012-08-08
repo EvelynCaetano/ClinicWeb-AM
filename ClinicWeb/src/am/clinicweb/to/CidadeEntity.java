@@ -1,13 +1,7 @@
 package am.clinicweb.to;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /** 
  * @author Eduardo Michels
@@ -25,14 +19,14 @@ public class CidadeEntity {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE,
 	generator="cidade")
-	@Column(name="")
+	@Column(name="COD_CIDADE")
 	private int id;
 	
 	
-	@Column(name="")
+	@Column(name="NOME")
 	private String nome;
 	
-	@Column(name="")
+	@Column(name="COD_ESTADO")
 	private EstadoEntity estado;
 	
 	

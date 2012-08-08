@@ -1,0 +1,26 @@
+/*
+ * jQuery UI CSS Framework 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ *
+ */ 
+ 
+.ui-progressbar { 
+	height: 14px; 
+	border:2px solid #5e5d5d; 
+	background:url(../../images/dark/progressbg.png) repeat-x;
+	border-radius:0;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+}
+.ui-progressbar .ui-progressbar-value { 
+	height:14px; 
+	background:url(../../images/dark/progressbgfill.png) repeat-x; 
+	border-radius:0;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+}
